@@ -4,6 +4,12 @@ import Socials from "../components/socialLinks";
 import Search from "../components/searchCont";
 import FeatureCard from "../components/featureCard";
 import CitySlider from "../components/citySlider";
+import SchoolSlider from "../components/featuresSchools";
+import Form from "../components/enquiryForm";
+import TopFea from "../components/topFeatures";
+import AboutBan from "../components/aboutUsBan";
+import Testimonial from "../components/testimonial";
+import About from "../components/about";
 import styles from "styled-components";
 
 function Home() {
@@ -57,7 +63,27 @@ function Home() {
       </section>
       <section className="section3">
       <CitySlider/>
+      <SchoolSlider/>
       </section>
+      <section className="section4">
+        <img src="../src/assets/contactImg.jpg" alt="" />
+        <div className="form">
+      <span className="bg"></span>
+        <Form/>
+                  </div>
+      </section>
+      <section className="section5">
+      <h2>TOP FEATURES</h2>
+      <TopFea/>
+      </section>
+      <section className="section6">
+      <h2>ABOUT US</h2>
+      <div className="aboutCont">
+      <AboutBan/>
+      </div>
+      </section>
+      <About/>
+      <Testimonial/>
     </MainCont>
   );
 }
@@ -104,6 +130,41 @@ padding-top:50px;
       scrollbar-width: none;  /* Firefox */
     }
   }
+  .section4{
+    position:relative; 
+    width:100%;
+    padding: 50px 0;
+    display:flex;
+    justify-content:center; 
+    .form{
+      width:450px;
+      position: relative;
+      max-width: 92%;
+      .bg{
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background: rgba(214, 218, 232, 0.25);
+  box-shadow: 2px 2px 14px 3px #90979A;
+  backdrop-filter: blur(15px);
+      }
+    }
+    img{
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+    }
+  }
+  .section6{
+    .aboutCont{
+      background: #3E4D99;
+      padding: 10px 0;
+    }
+  }
   @media(min-width:700px){
     .sideBar{
       position:absolute;
@@ -130,7 +191,7 @@ h1{
     }
     .search{
       position: absolute;
-      bottom: -7px;
+      bottom: -12px;
     }
   }
   }

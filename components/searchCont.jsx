@@ -24,7 +24,7 @@ display: flex;
     flex-direction: row;
     justify-content:space-between;
     align-items: end;
-    padding:10px 15px;
+    padding: 20px 15px;
     background: rgba(255, 255, 255, 0.17);
 box-shadow: 0px 0px 10px 1px #1F001B;
 border-radius: 15px;
@@ -73,6 +73,9 @@ padding-bottom: 0px;
 }
 @media(max-width: 700px){
     .sing{
+      span{
+        font-size: 13px;
+    }
         input{
             width:100%;
     height:25px;

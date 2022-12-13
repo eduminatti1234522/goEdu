@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../components/header'
+import Footer from '../components/footer'
 import styles from 'styled-components'
 
 function MainLayout({children}) {
@@ -9,6 +10,7 @@ function MainLayout({children}) {
       <Header/>
         </div>
       {children}
+      <Footer/>
     </MainCont>
   )
 }

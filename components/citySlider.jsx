@@ -1,8 +1,11 @@
+
+
 import React from "react";
 import styles from "styled-components";
 // import Swiper from "react-id-swiper";
 // import "swiper/css/swiper.css";
 import Slider from "react-slick";
+import Btn from './btn'
 
 function sturc() {
     const settings = {
@@ -13,7 +16,32 @@ function sturc() {
         slidesToShow: 3,
         speed: 500,
         arrows:false,
-        rows:1,
+        responsive: [
+            // {
+            //   breakpoint: 1024,
+            //   settings: {
+            //     slidesToShow: 3,
+            //     slidesToScroll: 3,
+            //     infinite: true,
+            //     dots: true
+            //   }
+            // },
+            {
+              breakpoint: 800,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
       };
   // const params = {
   //     pagination: {
@@ -30,39 +58,23 @@ function sturc() {
   const cities = [{}, {}, {}, {}, {}];
   return (
     <MainCont>
-      <h2>Center Mode</h2>
+      <h2>SCHOOLS BY CITIES</h2>
 
       <Slider
         {...settings}
       >
         {cities.map((val, index) => (
-          <div key={index} className="singCity">
+          <div key={index} className="outerSingCity">
+          <div className="singCity">
             <img src="../src/assets/cities/city1.jpg" alt="" />
             <h4>DUBAI</h4>
           </div>
+          </div>
         ))}
       </Slider>
-      {/* <h2>Center Mode</h2>
-        <Slider {...settings}>
-          <div>
-            <h3>1</h3>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-        </Slider> */}
+      <div className="btn">
+       <Btn text={"Explore"}/>
+       </div>
     </MainCont>
   );
 }
@@ -70,12 +82,23 @@ function sturc() {
 export default sturc;
 
 const MainCont = styles.div`
+// h3, div{
+//     color:blue;
+//     background:red
+// }
+.slick-track{
+    display:flex;
+}
+// .outerSingCity{
+//     padding:0 15px;
+// }
 .singCity{
     background: #FFFFFF;
 box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.15);
 border-radius: 15px;
-width:23%;
+width: 97%;
 min-width:200px;
+
 img{
     width:100%;
     aspect-ratio:4/3;
@@ -83,6 +106,28 @@ img{
 h4{
     color:black;
     margin:20px auto 30px auto;
+    padding-bottom: 8px;
+    font-weight: 700;
 }
+}
+.slick-slide{
+    .singCity{
+        transform:scale(0.8);
+    }
+    img{
+        opacity:0.8;
+    }
+}
+.slick-center{
+    .singCity{
+        transform:scale(1);
+    }
+    img{
+        opacity:1;
+    }
+}
+.btn{
+    width:200px;
+    margin:30px auto;
 }
 `;
