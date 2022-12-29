@@ -71,6 +71,7 @@ function sturc() {
           </div>
           </div>
         ))}
+        
       </Slider>
       <div className="btn">
        <Btn text={"Explore"}/>

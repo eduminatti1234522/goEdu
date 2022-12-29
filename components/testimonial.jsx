@@ -44,6 +44,7 @@ function sturc() {
   const cities = [{}, {}, {}, {}, {}];
   return (
     <MainCont>
+      <img className='bgImg' src="../src/assets/contactImg2.jpg" alt="" />
       <div className="mainCont">
         <h2>TESTIMONIALS</h2>
         <Slider
@@ -66,6 +67,16 @@ export default sturc
 const MainCont=styles.div`
 background: #3E4D99;
 padding-bottom: 40px;
+position:relative;
+margin-bottom: 100px;
+.bgImg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 70px;
+  left: 0;
+  z-index:-1;
+}
 h2{
   color:white;
   margin-bottom:10px;

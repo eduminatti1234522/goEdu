@@ -2,7 +2,7 @@ import React from "react";
 import styles from "styled-components";
 import { useForm } from "react-hook-form";
 
-function sturc() {
+function sturc({mainStyle=false}) {
   const {
     register,
     handleSubmit,
@@ -12,7 +12,7 @@ function sturc() {
   const onSubmit = (data) => console.log(data);
 
   return (
-    <MainCont>
+    <MainCont className={mainStyle ? "customMain" : ""}>
       <h3>ENQUIRY FORM</h3>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
@@ -57,7 +57,10 @@ width: fit-content;
     width:100%;
     overflow:hidden;
     position:relative;
-  
+    &.customMain{
+      background: rgba(214, 218, 232, 0.25);
+box-shadow: 2px 2px 14px 3px #90979A;
+    }
     h3{
       color: black;
       z-index:9;
