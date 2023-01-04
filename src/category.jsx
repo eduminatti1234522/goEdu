@@ -9,13 +9,27 @@ import Card from "../components/schoolCard";
 import Enqury from "../components/enquiryForm";
 import Testimonial from "../components/testimonial";
 import Pagination from "../components/paginationCont";
+// , reset 
+import Funcs from './features/data'
+// import { useSelector, useDispatch } from 'react-redux'
+import { useEffect } from 'react';
 
 function Category() {
   const myRef = useRef(null)
   const items=[...new Array(32)].map((_,index)=>index);
   const [current, setCurrent] = useState([]);
- 
+  // const { goals, isLoading, isError, message } = useSelector(
+  //   (state) => state.goals
+  // )
 const itemsPerPage=10;
+const schoolsFunc=async()=>{
+let response= await Funcs?.getSchools("dehraduns","boarding");
+console.log(response);
+}
+useEffect(()=>{
+  console.log(Funcs?.getSchools);
+  schoolsFunc();
+},[])
   return (
     <MainCont>
          <section className="section1">

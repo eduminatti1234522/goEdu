@@ -45,11 +45,11 @@ function SchoolCard() {
   return (
     <MainDiv>
       <div className="blockk1">
-        <img className="mainImg" src="../src/assets/contactImg.jpg" alt="" />
+        <img className="mainImg" src="/contactImg2.jpg" alt="" />
         <div className="block12">
-          <img src="../src/assets/contactImg.jpg" alt="" />
-          <img src="../src/assets/contactImg.jpg" alt="" />
-          <img src="../src/assets/contactImg.jpg" alt="" />
+          <img src="/contactImg2.jpg" alt="" />
+          <img src="/contactImg2.jpg" alt="" />
+          <img src="/contactImg2.jpg" alt="" />
         </div>
       </div>
       <div className="blockk2">
@@ -132,6 +132,9 @@ border-radius: 10px;
 padding:10px;
 padding-right: 17px;
 margin-bottom:40px;
+.priceCont{
+  display:none;
+}
 .bg{
     display:block;
 }
@@ -367,6 +370,7 @@ padding:0;
         }
     }
     .priceCont{
+      display:initial;
     margin-top:15px;
        width:50%; 
        .price{
