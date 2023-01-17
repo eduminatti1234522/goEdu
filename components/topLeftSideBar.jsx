@@ -1,10 +1,13 @@
 import React from 'react'
 import styles from 'styled-components'
+import { Link } from "react-router-dom";
 
 function sturc() {
   return (
     <MainCont>
+           <Link to="/">
         <img className="logo" src="/logo.png" alt="" />
+          </Link>
     </MainCont>
   )
 }
@@ -20,8 +23,12 @@ display:flex;
 justify-content:center;
 align-items:center;
 max-width: 140px;
-.logo{
+a{
     width:80%;
     height:auto;
+    .logo{
+      width:100%;
+      height:auto;
+    }
 }
 `;

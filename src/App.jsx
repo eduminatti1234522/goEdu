@@ -4,6 +4,7 @@ import { BrowserRouter as Router,Routes, Route, Link } from 'react-router-dom';
 import Home from "./home";
 import Cate from "./category";
 import School from "./school";
+import About from "./about-us2";
 import Layout from "../layout/mainLayout";
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
 <Routes>
     <Route exact path='/' element={< Home />}></Route>
     <Route exact path='/category/:city/:type' element={< Cate />}></Route>
-    <Route exact path='/school' element={< School />}></Route>
+    <Route exact path='/school/:city/:id' element={< School />}></Route>
+    <Route exact path='/about-us' element={< About />}></Route>
     {/* <Route exact path='/about' element={< About />}></Route>
     <Route exact path='/contact' element={< Contact />}></Route> */}
 </Routes>

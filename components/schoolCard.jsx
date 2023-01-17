@@ -1,7 +1,8 @@
 import React from "react";
 import Styles from "styled-components";
+import { Link } from "react-router-dom";
 
-function SchoolCard() {
+function SchoolCard({ data,city }) {
   const fea = [
     {
       title: "Established",
@@ -54,66 +55,91 @@ function SchoolCard() {
       </div>
       <div className="blockk2">
         <div className="blockk21">
-        <div className="bl1">
-          <h4>Ecole Globale International Girls School</h4>
-          <div className="rating">
-            <div className="stars">
-              {[...new Array(5)].map((_, index) => (
-                <img
-                  key={index}
-                  src={`../src/assets/icons/${
-                    index + 1 > 4.5 && index < 4.5 ? "halfStar" : "star"
-                  }.svg`}
-                  alt=""
-                />
-              ))}
+          <div className="bl1">
+            <h4>{data?.name}</h4>
+            <div className="rating">
+              <div className="stars">
+                {[...new Array(5)].map((_, index) => (
+                  <img
+                    key={index}
+                    src={`../src/assets/icons/${
+                      index + 1 > 4.5 && index < 4.5 ? "halfStar" : "star"
+                    }.svg`}
+                    alt=""
+                  />
+                ))}
+              </div>
+              <span className={"bg"}>based on 27 reviews</span>
             </div>
-            <span className={"bg"}>based on 27 reviews</span>
           </div>
-        </div>
-        <span className="ann bg">Annual Fees (in INR)</span>
-        <span className="price bg">8,00,000 to 8,62,800</span>
-        <div className="address">
-          <img src="../src/assets/icons/location.svg" alt="" />
-          <address>
-            {" "}
-            Sheikh Ammar bin Humaid Road, Al Tallah 2, Ajman, UAE
-          </address>
-        </div>
+          <span className="ann bg">Annual Fees (in INR)</span>
+          <span className="price bg">
+            {data?.feefrom} to {data?.feeto}
+          </span>
+          <div className="address">
+            <img src="../src/assets/icons/location.svg" alt="" />
+            <address> {data?.Address}</address>
+          </div>
         </div>
         <div className="blockk22">
-        <div className="feature">
-          {fea.map((val, index) => (
-            <div key={index} className="sing">
-              <img src={`../src/assets/schFea${index + 1}.png`} alt="" />
-              <span className="title">{val.title}</span>
-              <span className="val">{val.val}</span>
+          <div className="feature">
+            {/* {fea.map((val, index) => ( */}
+            <div className="sing">
+              <img src={`../src/assets/schFea1.png`} alt="" />
+              <span className="title">Established</span>
+              <span className="val">{data?.establishment}</span>
             </div>
-          ))}
-        </div>
-        <div className="raBtns">
-          <div className="ra">
-            {ratings.map((val, index) => (
-              <div key={index} className="sing">
-                <span className="title">
-                    {val.title}
-                </span>
-                <span className="bar">
-                  <span style={{width: val.val + "%"}}></span>
-                </span>
-                <span className="per">{val.val + "%"}</span>
-              </div>
-            ))}
+            <div className="sing">
+              <img src={`../src/assets/schFea1.png`} alt="" />
+              <span className="title">Board</span>
+              <span className="val">{data?.establishment}</span>
+            </div>
+            <div className="sing">
+              <img src={`../src/assets/schFea3.png`} alt="" />
+              <span className="title">Category</span>
+              <span className="val">{data?.establishment}</span>
+            </div>
+            <div className="sing">
+              <img src={`../src/assets/schFea4.png`} alt="" />
+              <span className="title">Type</span>
+              <span className="val">{data?.establishment}</span>
+            </div>
+            <div className="sing">
+              <img src={`../src/assets/schFea5.png`} alt="" />
+              <span className="title">Grade Upto</span>
+              <span className="val">
+                {data?.classfrom} to {data?.classto}
+              </span>
+            </div>
+            {/* ))} */}
           </div>
-          <div className="priceCont">
-          <span className="ann sm">Annual Fees (in INR)</span>
-        <span className="price sm">8,00,000 to 8,62,800</span>
-          </div>
-          <div className="btnss">
-                    <span>VIEW SCHOOL</span>
-                    <span>CALL NOW</span>
+          <div className="raBtns">
+            <div className="ra">
+              {ratings.map((val, index) => (
+                <div key={index} className="sing">
+                  <span className="title">{val.title}</span>
+                  <span className="bar">
+                    <span style={{ width: val.val + "%" }}></span>
+                  </span>
+                  <span className="per">{val.val + "%"}</span>
                 </div>
-        </div>
+              ))}
+            </div>
+            <div className="priceCont">
+              <span className="ann sm">Annual Fees (in INR)</span>
+              <span className="price sm">
+                {data?.feefrom} to {data?.feeto}
+              </span>
+            </div>
+            <div className="btnss">
+              <span>
+          <Link to={`/school/${city}/${data?._id}`}>
+                VIEW SCHOOL
+                </Link>
+                </span>
+              <span>CALL NOW</span>
+            </div>
+          </div>
         </div>
       </div>
     </MainDiv>
@@ -299,6 +325,9 @@ display:block;
     width: 100%;
     font-size: 14px;
     padding: 7px 0;
+    a{
+      color:#2F3F93;
+    }
         }
         span:nth-child(2){
             background:#2F3F93;

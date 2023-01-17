@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_URL = 'http://localhost:3000/api/goals'
+const API_URL = 'http://localhost:3000/api/getAllData/'
 
 // Create new goal
 const createGoal = async(goalData, token) => {
@@ -17,13 +17,26 @@ const createGoal = async(goalData, token) => {
 
 // Get user goals
 const getSchools = async(city, type) => {
-    const config = {
-        headers: {
+        const config = {
+            // headers: {
             // Authorization: `Bearer ${token}`,
-        },
-    }
+            // },
+        }
 
-    const response = await axios.get((API_URL + "/" + city), config)
+        const response = await axios.get((API_URL + city))
+
+        return response.data
+    }
+    // Get user goals
+const getSchool = async(city, id) => {
+    const config = {
+            // headers: {
+            // Authorization: `Bearer ${token}`,
+            // },
+        }
+        //  + "dehradun" + "/"
+    console.log(API_URL + city + "/" + id);
+    const response = await axios.get((API_URL + city + "/" + id));
 
     return response.data
 }
@@ -44,6 +57,7 @@ const deleteGoal = async(goalId, token) => {
 const goalService = {
     createGoal,
     getSchools,
+    getSchool,
     deleteGoal,
 }
 

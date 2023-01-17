@@ -6,13 +6,15 @@ import MenuIcon from "./menuIcon";
 function Header() {
   return (
     <MainCont>
-      <img className="sm" src="/logo.png" alt="" />
+          <Link to="/">
+      <img className="sm logo" src="/logo.png" alt="" />
+          </Link>
       <ul className="ul bg">
         <li>
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/about">About Us</Link>
+          <Link to="/about-us">About Us</Link>
         </li>
         <li>
           <Link to="/contact">Contact Us</Link>
@@ -41,6 +43,10 @@ display:flex;
 justify-content:center;
 align-items:center;
 position:relative;
+height: 70px;
+.logo{
+  height: 60px;
+}
 .sm{
     display:none;
 }

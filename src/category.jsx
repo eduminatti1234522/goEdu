@@ -13,21 +13,37 @@ import Pagination from "../components/paginationCont";
 import Funcs from './features/data'
 // import { useSelector, useDispatch } from 'react-redux'
 import { useEffect } from 'react';
+import axios from 'axios'
+import { useParams } from 'react-router-dom';
 
 function Category() {
   const myRef = useRef(null)
   const items=[...new Array(32)].map((_,index)=>index);
   const [current, setCurrent] = useState([]);
+  const [schools, setSchools] = useState([]);
+  let { city } = useParams();
+
   // const { goals, isLoading, isError, message } = useSelector(
   //   (state) => state.goals
   // )
 const itemsPerPage=10;
 const schoolsFunc=async()=>{
-let response= await Funcs?.getSchools("dehraduns","boarding");
-console.log(response);
+  try{
+
+    console.log("rresponse");
+    console.log(city);
+    let response= await Funcs?.getSchools(city,"boarding");
+    // let response= await axios.get("http://localhost:3000/api/getAllData/dehraduns");
+    console.log("rresponse11");
+    console.log(response);
+    setSchools(response || []);
+    // if(response?.data?.length){
+      // }
+    }catch{
+
+    }
 }
 useEffect(()=>{
-  console.log(Funcs?.getSchools);
   schoolsFunc();
 },[])
   return (
@@ -73,11 +89,11 @@ useEffect(()=>{
             </div>
           </div>
   <div ref={myRef} className="block2">
-  <Pagination myRef={myRef} itemsPerPage={itemsPerPage} setCurrent={setCurrent} items={items}>
+  <Pagination myRef={myRef} itemsPerPage={itemsPerPage} setCurrent={setCurrent} items={schools}>
   <div style={{width: '100%'}} className="blockIn2">
             {
               current.map((val,index)=>
-              <Card key={index}/>
+              <Card key={index} data={val} city={city}/>
               )
             }
           </div>

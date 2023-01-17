@@ -6,6 +6,7 @@ import styles from "styled-components";
 // import "swiper/css/swiper.css";
 import Slider from "react-slick";
 import Btn from './btn'
+import { Link } from "react-router-dom";
 
 function sturc() {
     const settings = {
@@ -65,10 +66,12 @@ function sturc() {
       >
         {cities.map((val, index) => (
           <div key={index} className="outerSingCity">
+            <Link to="/category/dehradun/boarding">
           <div className="singCity">
             <img src="../src/assets/cities/city1.jpg" alt="" />
             <h4>DUBAI</h4>
           </div>
+        </Link>
           </div>
         ))}
         

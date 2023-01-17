@@ -15,7 +15,7 @@ function PaginationCont({children,itemsPerPage,setCurrent,items,myRef=false}) {
       console.log(`Loading items from ${itemOffset} to ${endOffset}`);
       const currentItems = items.slice(itemOffset, endOffset);
       setCurrent(currentItems);
-    },[itemOffset])
+    },[itemOffset,items])
     const pageCount = Math.ceil(items.length / itemsPerPage);
 
   // Invoke when user click to request another page.

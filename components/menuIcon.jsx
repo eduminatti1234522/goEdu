@@ -21,7 +21,7 @@ flex-direction:column;
 justify-content:center;
 gap:7px;
 width:30px;
-
+width: 50px;
 span{
     background:white;
     width:100%;
