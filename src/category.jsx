@@ -1,4 +1,4 @@
-import React,{useState,useRef} from 'react'
+import React, { useState, useRef } from "react";
 import styles from "styled-components";
 import SideBar from "../components/topLeftSideBar";
 import Socials from "../components/socialLinks";
@@ -9,16 +9,16 @@ import Card from "../components/schoolCard";
 import Enqury from "../components/enquiryForm";
 import Testimonial from "../components/testimonial";
 import Pagination from "../components/paginationCont";
-// , reset 
-import Funcs from './features/data'
+// , reset
+import Funcs from "./features/data";
 // import { useSelector, useDispatch } from 'react-redux'
-import { useEffect } from 'react';
-import axios from 'axios'
-import { useParams } from 'react-router-dom';
+import { useEffect } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 
 function Category() {
-  const myRef = useRef(null)
-  const items=[...new Array(32)].map((_,index)=>index);
+  const myRef = useRef(null);
+  const items = [...new Array(32)].map((_, index) => index);
   const [current, setCurrent] = useState([]);
   const [schools, setSchools] = useState([]);
   let { city } = useParams();
@@ -26,86 +26,86 @@ function Category() {
   // const { goals, isLoading, isError, message } = useSelector(
   //   (state) => state.goals
   // )
-const itemsPerPage=10;
-const schoolsFunc=async()=>{
-  try{
-
-    console.log("rresponse");
-    console.log(city);
-    let response= await Funcs?.getSchools(city,"boarding");
-    // let response= await axios.get("http://localhost:3000/api/getAllData/dehraduns");
-    console.log("rresponse11");
-    console.log(response);
-    setSchools(response || []);
-    // if(response?.data?.length){
+  const itemsPerPage = 10;
+  const schoolsFunc = async () => {
+    try {
+      console.log("rresponse");
+      console.log(city);
+      let response = await Funcs?.getSchools(city, "boarding");
+      // let response= await axios.get("http://localhost:3000/api/getAllData/dehraduns");
+      console.log("rresponse11");
+      console.log(response);
+      setSchools(response || []);
+      // if(response?.data?.length){
       // }
-    }catch{
-
-    }
-}
-useEffect(()=>{
-  schoolsFunc();
-},[])
+    } catch {}
+  };
+  useEffect(() => {
+    schoolsFunc();
+  }, []);
   return (
     <MainCont>
-         <section className="section1">
+      <section className="section1">
         <div className="sideBar bg">
-         <SideBar />
+          <SideBar />
         </div>
         <div className="innerDiv">
-        <div className="btns">
-          <span>FIND SCHOOLS</span>
-          <span>SCHOLASHIPS</span>
-        </div>
-        <div className="search">
-        <Search/>
-        </div>
+          <div className="btns">
+            <span>FIND SCHOOLS</span>
+            <span>SCHOLASHIPS</span>
+          </div>
+          <div className="search">
+            <Search />
+          </div>
         </div>
         <div className="socials sm">
-        <Socials/>
+          <Socials />
         </div>
         <img className="mainImgg" src="/mainTopImg.png" alt="" />
       </section>
       <div className="btns btnsOuter">
-          <span>FIND SCHOOLS</span>
-          <span>SCHOLASHIPS</span>
+        <span>FIND SCHOOLS</span>
+        <span>SCHOLASHIPS</span>
+      </div>
+      <section className="section2">
+        <div className="block1">
+          <h3>Search by Maps</h3>
+          <div className="map">
+            <Map />
+          </div>
         </div>
-        <section className="section2">
-          <div className="block1">
-            <h3>Search by Maps</h3>
-            <div className="map">
-       <Map/>
-            </div>
-          </div>
-          <div className="block2">
+        <div className="block2">
           <h3>Filter</h3>
-          <Filter/>
+          <Filter />
+        </div>
+      </section>
+      <section className="section3">
+        <div className="block1">
+          <div className="form">
+            <Enqury mainStyle={true} />
           </div>
-        </section>
-        <section className="section3">
-          <div className="block1">
-            <div className="form">
-<Enqury mainStyle={true}/>
+        </div>
+        <div ref={myRef} className="block2">
+          <Pagination
+            myRef={myRef}
+            itemsPerPage={itemsPerPage}
+            setCurrent={setCurrent}
+            items={schools}
+          >
+            <div style={{ width: "100%" }} className="blockIn2">
+              {current.map((val, index) => (
+                <Card key={index} data={val} city={city} />
+              ))}
             </div>
-          </div>
-  <div ref={myRef} className="block2">
-  <Pagination myRef={myRef} itemsPerPage={itemsPerPage} setCurrent={setCurrent} items={schools}>
-  <div style={{width: '100%'}} className="blockIn2">
-            {
-              current.map((val,index)=>
-              <Card key={index} data={val} city={city}/>
-              )
-            }
-          </div>
-  </Pagination>
-          </div>
-        </section>
-      <Testimonial/>
+          </Pagination>
+        </div>
+      </section>
+      <Testimonial />
     </MainCont>
-  )
+  );
 }
 
-export default Category
+export default Category;
 
 const MainCont = styles.div`
 .section1{

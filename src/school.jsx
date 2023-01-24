@@ -5,6 +5,7 @@ import Socials from "../components/socialLinks";
 import SideBar from "../components/topLeftSideBar";
 import Info from "../components/schoolInfo";
 import Testimonial from "../components/testimonial";
+import Form from "../components/enquiryForm";
 import { useParams } from 'react-router-dom';
 import Funcs from './features/data'
 
@@ -31,6 +32,9 @@ function sturc() {
   }
   useEffect(()=>{
     schoolsFunc();
+    if(window.innerWidth<1000){
+      setSwitchh(4);
+    }
   },[])
 
   return (
@@ -76,20 +80,32 @@ function sturc() {
           <Info />
         </div>
         <div className="block2">
+          <div className="sm">
+          <div className="text">
+          <p>{school?.name}</p>
+          <div className="address">
+            <img src="/blueLocation.svg" alt="" />
+            <p>{school?.Address}</p>
+          </div>
+        </div>
+            <div className="form">
+            <Form/>
+            </div>
+          </div>
           <div className="imgs">
             <img src="/schImg.jpg" alt="" />
             <img src="/schImg.jpg" alt="" />
             <img src="/schImg.jpg" alt="" />
             <img src="/schImg.jpg" alt="" />
           </div>
-          {switchh == 1 && (
+          {(switchh == 1 || switchh == 4) && (
             <div className="icons">
               {[...new Array(8)].map((_, index) => (
                 <img key={index} src={`/Group ${498 + index}.png`} alt="" />
               ))}
             </div>
           )}
-          {switchh == 2 && (
+          {(switchh == 2 || switchh == 4) && (
             <div className="about">
               <span>ABOUT SCHOOL</span>
               <p>
@@ -97,7 +113,7 @@ function sturc() {
               </p>
             </div>
           )}
-          {switchh == 3 && (
+          {(switchh == 3 || switchh == 4) && (
             <div className="reviews">
               <div className="reviewCard">
                 <div className="block1">
@@ -171,6 +187,9 @@ function sturc() {
 export default sturc;
 
 const MainCont = styles.div`
+.sm{
+  display:none;
+}
 .section1{
     position: relative;   
     width:100vw;
@@ -277,6 +296,7 @@ border:2px solid #3e4d99;
     padding:10 20px;
     .block2{
       flex: 1;
+      max-width: 100vw;
       .reviews{
         margin-top: 16px;
         width: 350px;
@@ -287,10 +307,13 @@ border:2px solid #3e4d99;
         width: 97%;
         gap: 22px;
         margin-top: 30px;
+        overflow:scroll;
+        padding:0 20px;
         .reviewCard{
           padding: 30px 20px;
           background: #EEEFF6;
           border-radius: 12px;
+          min-width:300px;
           .block1{
             display: flex;
             color: #2F3F93;
@@ -317,9 +340,7 @@ img{
       .imgs{
         display: flex;
         overflow: hidden;
-        width: 100%;
         width: 90%;
-         margin: auto;
         img{
           object-fit:cover;
           width:100%;
@@ -351,6 +372,60 @@ p{
     }
   }
   @media(max-width:1000px){
+    .sm{
+      display:initial;
+      .text{
+        color: #2F3F93;
+        text-align: left;
+        font-size: 18px;
+            max-width: 90%;
+    margin: 20px auto;
+        p{
+          font-size: 23px;
+          margin-bottom: 12px;
+        }
+        .address{
+          display:flex;
+          p{
+            font-size: 13px;
+            margin-bottom: 0px; 
+          }
+        }
+        img{
+          width:14px;
+          height:auto;
+          margin-right:10px;
+        }
+      }
+      .form{
+        padding:15px;
+        width:95%;
+        margin:25px auto;
+        max-width:400px;
+        background: rgba(214, 218, 232, 0.25);
+box-shadow: 2px 2px 14px 3px #90979A;
+border-radius: 20px;  
+
+}
+    }
+    .icons{
+      gap: 4% !important;
+    padding: 10px;
+      img{
+        width:30%;
+margin-bottom:20px;
+max-width:120px;
+      }
+    }
+    .about{
+      width: 95%;
+      margin: 40px auto;
+      span, p{
+        text-align:center !important;
+        margin:0px !important;
+        max-width: 100% !important;
+      }
+    }
     .btns{
         display:flex;
     }
@@ -375,6 +450,11 @@ p{
         left: 50%;
       transform: translateX(-50%);
       width: 350px;
+      }
+      .section2{
+        .block1{
+          display:none;
+        }
       }
 }
 `;

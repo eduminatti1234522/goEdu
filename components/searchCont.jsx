@@ -1,33 +1,45 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import styles from "styled-components";
-import {
-  useNavigate
-} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 function sturc() {
   const router = useNavigate();
-  const [type,setType]=useState("");
-  const [location,setLocation]=useState("");
+  const [type, setType] = useState("");
+  const [location, setLocation] = useState("");
   return (
     <MainCont>
       <div className="sing">
         <span>School type </span>
         {/* <input placeholder={"type of school"} type="text" /> */}
-        <select onChange={(e)=>{
-          console.log(e);
-          setType(e.target.value)}} name="cars" id="cars">
-    <option value="">Type of school</option>
-    <option value="dehradun">Dehradun</option>
-  </select>
+        <select
+          onChange={(e) => {
+            console.log(e);
+            setType(e.target.value);
+          }}
+          name="cars"
+          id="cars"
+        >
+          <option value="">Type of school</option>
+          <option value="dehradun">Dehradun</option>
+        </select>
       </div>
       <div className="sing">
         <span>Location</span>
         {/* <input placeholder={"Location"} type="text" /> */}
-        <select  onChange={(e)=>setLocation(e.target.value)}  name="cars" id="cars">
-    <option value="">Location</option>
-    <option value="boarding">Boarding</option>
-  </select>
+        <select
+          onChange={(e) => setLocation(e.target.value)}
+          name="cars"
+          id="cars"
+        >
+          <option value="">Location</option>
+          <option value="boarding">Boarding</option>
+        </select>
       </div>
-      <input type="submit" value="Search" className="submit" onClick={()=>router(`/category/${type}/${location}`)}/>
+      <input
+        type="submit"
+        value="Search"
+        className="submit"
+        onClick={() => router(`/category/${type}/${location}`)}
+      />
     </MainCont>
   );
 }

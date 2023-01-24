@@ -1,6 +1,8 @@
 import axios from 'axios'
 
 const API_URL = 'http://localhost:3000/api/getAllData/'
+const API_URL2 = 'http://localhost:3000/api/forms'
+const API_URL3 = 'http://localhost:3000/api/reviews'
 
 // Create new goal
 const createGoal = async(goalData, token) => {
@@ -14,8 +16,40 @@ const createGoal = async(goalData, token) => {
 
     return response.data
 }
+const createForm = async(data) => {
+    const config = {
+        // headers: {
+        //     Authorization: `Bearer ${token}`,
+        // },
+    }
 
-// Get user goals
+    const response = await axios.post(API_URL2, data)
+
+    return response.data
+}
+const createReview = async(data) => {
+    const config = {
+        // headers: {
+        //     Authorization: `Bearer ${token}`,
+        // },
+    }
+
+    const response = await axios.post(API_URL3, data)
+
+    return response.data
+}
+const getReviews = async(city) => {
+        const config = {
+            // headers: {
+            //     Authorization: `Bearer ${token}`,
+            // },
+        }
+
+        const response = await axios.post(API_URL3 + city)
+
+        return response.data
+    }
+    // Get user goals
 const getSchools = async(city, type) => {
         const config = {
             // headers: {
@@ -59,6 +93,9 @@ const goalService = {
     getSchools,
     getSchool,
     deleteGoal,
+    createForm,
+    getReviews,
+    createReview
 }
 
 export default goalService;
