@@ -297,6 +297,9 @@ border:2px solid #3e4d99;
     .block2{
       flex: 1;
       max-width: 100vw;
+      .reviews::-webkit-scrollbar {
+        display: none;
+      }
       .reviews{
         margin-top: 16px;
         width: 350px;
