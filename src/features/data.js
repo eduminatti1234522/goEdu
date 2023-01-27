@@ -1,5 +1,8 @@
 import axios from 'axios'
 
+// const API_URL = 'http://localhost:3000/api/getAllData/'
+// const API_URL2 = 'http://localhost:3000/api/forms'
+// const API_URL3 = 'http://localhost:3000/api/reviews'
 const API_URL = 'http://localhost:3000/api/getAllData/'
 const API_URL2 = 'http://localhost:3000/api/forms'
 const API_URL3 = 'http://localhost:3000/api/reviews'
