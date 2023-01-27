@@ -3,9 +3,9 @@ import axios from 'axios'
 // const API_URL = 'http://localhost:3000/api/getAllData/'
 // const API_URL2 = 'http://localhost:3000/api/forms'
 // const API_URL3 = 'http://localhost:3000/api/reviews'
-const API_URL = 'endpoints-three.vercel.app/api/getAllData/'
-const API_URL2 = 'endpoints-three.vercel.app/api/forms'
-const API_URL3 = 'endpoints-three.vercel.app/api/reviews'
+const API_URL = 'https://endpoints-three.vercel.app/api/getAllData/'
+const API_URL2 = 'https://endpoints-three.vercel.app/api/forms'
+const API_URL3 = 'https://endpoints-three.vercel.app/api/reviews'
 
 // Create new goal
 const createGoal = async(goalData, token) => {
