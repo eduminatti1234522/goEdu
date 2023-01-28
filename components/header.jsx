@@ -17,7 +17,7 @@ function Header() {
           <Link to="/about-us">About Us</Link>
         </li>
         <li>
-          <Link to="/contact">Contact Us</Link>
+          <Link to="/">Contact Us</Link>
         </li>
       </ul>
       <div className="btns bg">
