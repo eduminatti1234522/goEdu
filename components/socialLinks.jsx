@@ -1,27 +1,34 @@
 import React from 'react'
 import styles from 'styled-components'
+import fb from "../src/assets/icons/socials/fb.svg"
+import ins from "../src/assets/icons/socials/ins.svg"
+import tw from "../src/assets/icons/socials/fb.svg"
+import whatsapp from "../src/assets/icons/socials/whatsapp.svg"
+import youtube from "../src/assets/icons/socials/youtube.svg"
+
+
 
 function sturc() {
     const data=[
         {
 link:"",
-name:"whatsapp"
+name:fb
     },
         {
 link:"",
-name:"fb"
+name:ins
     },
     {
     link:"",
-    name:"ins"
+    name:tw
     },
         {
 link:"",
-name:"tw"
+name:whatsapp
     },
         {
 link:"",
-name:"youtube"
+name:youtube
     },
 ]
   return (
@@ -29,7 +36,7 @@ name:"youtube"
 {
     data.map((val,index)=>
     <a key={index} href={val.link}>
-        <img src={`../src/assets/icons/socials/${val.name}.svg`} alt="" />
+        <img src={val.name} alt="" />
     </a>
     )
 }

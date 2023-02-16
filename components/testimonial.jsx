@@ -2,7 +2,9 @@ import React from 'react'
 import styles from 'styled-components'
 import Sing from './singTesi'
 import Slider from "react-slick";
-
+import contact2 from '../src/assets/contactImg2.jpg'
+import right from '../src/assets/icons/rightIcon.svg'
+import left from '../src/assets/icons/leftIcon.svg'
 function sturc() {
   const settings = {
     // className: "center",
@@ -12,8 +14,8 @@ function sturc() {
     slidesToShow: 1,
     speed: 500,
     arrows:false,
-    nextArrow: <img className="arrow right" src="../src/assets/icons/rightIcon.svg" alt="" />,
-    prevArrow: <img className="arrow left" src="../src/assets/icons/leftIcon.svg" alt="" />,
+    nextArrow: <img className="arrow right" src={right} alt="" />,
+    prevArrow: <img className="arrow left" src={left} alt="" />,
     responsive: [
         // {
         //   breakpoint: 1024,
@@ -44,7 +46,7 @@ function sturc() {
   const cities = [{}, {}, {}, {}, {}];
   return (
     <MainCont>
-      <img className='bgImg' src="../src/assets/contactImg2.jpg" alt="" />
+      <img className='bgImg' src={contact2} alt="" />
       <div className="mainCont">
         <h2>TESTIMONIALS</h2>
         <Slider
