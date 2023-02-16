@@ -17,6 +17,8 @@ import img3 from "../public/featureHome/fea3.svg"
 import img4 from "../public/featureHome/fea4.svg"
 import img5 from "../public/featureHome/fea5.svg"
 import img6 from "../public/featureHome/fea6.svg"
+import contactImg from "../src/assets/contactImg.jpg"
+
 function Home() {
   const features=[
     {
@@ -77,7 +79,7 @@ function Home() {
       <SchoolSlider/>
       </section>
       <section className="section4">
-        <img src="../src/assets/contactImg.jpg" alt="" />
+        <img src={contactImg} alt="" />
         <div className="form">
       <span className="bg"></span>
         <Form/>

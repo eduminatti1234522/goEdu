@@ -1,11 +1,12 @@
 import React from 'react'
 import styles from 'styled-components'
 import Btn from './btn'
+import aboutImg from "../src/assets/aboutImg.png"
 
 function sturc() {
   return (
     <MainCont>
-        <img src="../src/assets/aboutImg.png" alt="" />
+        <img src={aboutImg} alt="" />
         <div className="cont">
             <p>In this time and era, education has become a valuable commodity. It is impossible to imagine a fruitful and satisfying life without schooling. However, with so many choices, resources, and facilities offered, choosing the best choice has become a huge challenge.</p>
             <p>

@@ -1,11 +1,12 @@
 import React from 'react'
 import styles from 'styled-components'
+import cityimg from '../public/images/cities/city1.jpg'
 
 function sturc() {
   return (
     <MainCont>
             <div className="singCity">
-            <img src="../src/assets/cities/city1.jpg" alt="" />
+            <img src={cityimg} alt="" />
             <h4>Ras Al Khaima American Academy</h4>
           </div>
     </MainCont>
