@@ -7,6 +7,7 @@ import styles from "styled-components";
 import Slider from "react-slick";
 import Btn from './btn'
 import { Link } from "react-router-dom";
+import cityimg from "../public/images/cities/city1.jpg"
 
 function sturc() {
     const settings = {
@@ -68,7 +69,7 @@ function sturc() {
           <div key={index} className="outerSingCity">
             <Link to="/category/dehradun/boarding">
           <div className="singCity">
-            <img src="../public/images/cities/city1.jpg" alt="" />
+            <img src={cityimg} alt="" />
             <h4>DUBAI</h4>
           </div>
         </Link>
