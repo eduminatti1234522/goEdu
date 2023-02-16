@@ -19,7 +19,9 @@ function sturc() {
           id="cars"
         >
           <option value="">Type of school</option>
-          <option value="dehradun">Dehradun</option>
+          <option value="boarding">Boarding</option>
+        
+
         </select>
       </div>
       <div className="sing">
@@ -31,14 +33,16 @@ function sturc() {
           id="cars"
         >
           <option value="">Location</option>
-          <option value="boarding">Boarding</option>
+          <option value="dehradun">Dehradun</option>
+          <option value="delhi22">Delhi</option>
+        
         </select>
       </div>
       <input
         type="submit"
         value="Search"
         className="submit"
-        onClick={() => router(`/category/${type}/${location}`)}
+        onClick={() => router(`/category/${location}/${type}`)}
       />
     </MainCont>
   );

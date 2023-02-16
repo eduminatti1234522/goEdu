@@ -68,7 +68,7 @@ function sturc() {
           <div key={index} className="outerSingCity">
             <Link to="/category/dehradun/boarding">
           <div className="singCity">
-            <img src="../src/assets/cities/city1.jpg" alt="" />
+            <img src="../public/images/cities/city1.jpg" alt="" />
             <h4>DUBAI</h4>
           </div>
         </Link>
