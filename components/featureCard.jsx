@@ -5,7 +5,8 @@ function sturc({data,id}) {
   return (
     <MainCont className={id%2 !== 1 ? "mainCont" : ""}>
 <div className="icon">
-    <img src={`../public/images/icons/features/fea${id}.svg`} alt="" />
+    {/* <img src={`../public/images/icons/features/fea${id}.svg`} alt="" /> */}
+    <img src="../public/images/icons/features/fea1.svg" alt="" />
 </div>
 <div className="content">
     <h3>{data?.title}</h3>
