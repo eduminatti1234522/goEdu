@@ -5,7 +5,7 @@ function sturc({data,id}) {
   return (
     <MainCont className={id%2 !== 1 ? "mainCont" : ""}>
 <div className="icon">
-    <img src={`../public/featureHome/fea${id}.svg`} alt="" />
+    <img src={`./public/featureHome/fea${id}.svg`} alt="" />
     {/* <img src="https://cdn.discordapp.com/attachments/1031605156996972574/1075675055679352852/fea1.webp" alt="" /> */}
 </div>
 <div className="content">
