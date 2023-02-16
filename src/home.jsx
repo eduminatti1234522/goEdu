@@ -11,32 +11,43 @@ import AboutBan from "../components/aboutUsBan";
 import Testimonial from "../components/testimonial";
 import About from "../components/about";
 import styles from "styled-components";
-
+import img1 from "../public/featureHome/fea1.svg"
+import img2 from "../public/featureHome/fea2.svg"
+import img3 from "../public/featureHome/fea3.svg"
+import img4 from "../public/featureHome/fea4.svg"
+import img5 from "../public/featureHome/fea5.svg"
+import img6 from "../public/featureHome/fea6.svg"
 function Home() {
   const features=[
     {
       title:"Explore School",
-      para:"Refer to our school listing and explore schools from all parts of India."
+      para:"Refer to our school listing and explore schools from all parts of India.",
+      fea:img1
     },
     {
       title:"Get Expert Advice",
-      para:"Help yourself with our specialized assistance offered by us as a consultancy service."
+      para:"Help yourself with our specialized assistance offered by us as a consultancy service.",
+      fea:img2
     },
     {
       title:"Write a Review",
-      para:"Write reviews on schools here to guide other parents or students like you."
+      para:"Write reviews on schools here to guide other parents or students like you.",
+      fea:img3
     },
     {
       title:"All School Details",
-      para:"Know about minute details & facilities of each school from our thoroughly curated listing."
+      para:"Know about minute details & facilities of each school from our thoroughly curated listing.",
+      fea:img4
     },
     {
       title:"Free Counselling",
-      para:"Get access to free counselling service for your kids to clear their queries."
+      para:"Get access to free counselling service for your kids to clear their queries.",
+      fea:img5
     },
     {
       title:"Register Your School",
-      para:"Register your institution with us to get a better visibility through our listing."
+      para:"Register your institution with us to get a better visibility through our listing.",
+      fea:img6
     },
   ];
   return (
