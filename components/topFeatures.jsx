@@ -1,19 +1,26 @@
 import React from 'react'
 import styles from 'styled-components'
-
+import feaimg1 from '../src/assets/topFeatures/fea1.png'
+import feaimg2 from '../src/assets/topFeatures/fea2.png'
+import feaimg3 from '../src/assets/topFeatures/fea3.png'
+import feaimg4 from '../src/assets/topFeatures/fea4.png'
 function sturc() {
     const data=[
         {
             text:"Compare Schools",
+            fea:feaimg1
         },
         {
             text:"Common Application",
+            fea:feaimg2
         },
         {
             text:"Expert Counselling",
+            fea:feaimg3
         },
         {
             text:"Expert Counselling",
+            fea:feaimg4
         },
     ]
   return (
@@ -24,7 +31,7 @@ function sturc() {
             <div className="iconCont">
 
             <span>
-                <img src={`../src/assets/topFeatures/fea${index +1}.png`} alt="" />
+                <img src={val?.fea} alt="" />
             </span>
             </div>
             <span className="text">{val.text}</span>
