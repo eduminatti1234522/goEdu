@@ -101,7 +101,8 @@ padding-bottom: 0px;
     border: none;
     border-radius: 7px;
     width: 20%;
-    height:40px;
+    height:40px !important ;
+    cursor: pointer
 }
 @media(max-width: 700px){
     .sing{

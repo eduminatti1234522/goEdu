@@ -6,31 +6,31 @@ import MenuIcon from "./menuIcon";
 function Header() {
   return (
     <MainCont>
-          <Link to="/">
-      <img className="sm logo" src="/logo.png" alt="" />
-          </Link>
-      <ul className="ul bg">
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about-us">About Us</Link>
-        </li>
-        <li>
-          <Link to="/">Contact Us</Link>
-        </li>
-      </ul>
-      <div className="btns bg">
-        <span>Login</span>
-        <span>
-          EN
-          <img src={"/icons/downArrow.png"} alt="" />
-        </span>
-      </div>
-      <div className="menuIcon sm">
-        <MenuIcon />
-      </div>
-    </MainCont>
+           <Link to="/">
+       <img className="sm logo" src="/logo.png" alt="" />
+           </Link>
+       <ul className="ul bg">
+         <li>
+           <Link to="/">Home</Link>
+         </li>
+         <li>
+           <Link to="/about-us">About Us</Link>
+         </li>
+         <li>
+           <Link to="/">Contact Us</Link>
+         </li>
+       </ul>
+       <div className="btns bg">
+         <span>Login</span>
+         <span>
+           EN
+           <img src={"/icons/downArrow.png"} alt="" />
+         </span>
+       </div>
+       <div className="menuIcon sm">
+         <MenuIcon />
+       </div>
+     </MainCont>
   );
 }
 
@@ -44,6 +44,7 @@ justify-content:center;
 align-items:center;
 position:relative;
 height: 70px;
+
 .logo{
   height: 60px;
 }
