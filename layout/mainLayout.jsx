@@ -27,7 +27,7 @@ export default MainLayout;
 const MainCont=styles.div`
 .header{
     position:absolute;
-    width:100vw;
+    width:100%;
     z-index:9;
 }
 `;

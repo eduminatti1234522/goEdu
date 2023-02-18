@@ -32,7 +32,7 @@ function AboutUs() {
         <div className="innerDiv">
           <div className="btns">
             <span>FIND SCHOOLS</span>
-            <span>SCHOLASHIPS</span>
+            <span>SCHOLARSHIPS</span>
           </div>
           <div className="search">
             <Search />
@@ -45,7 +45,7 @@ function AboutUs() {
       </section>
       <div className="btns btnsOuter">
         <span>FIND SCHOOLS</span>
-        <span>SCHOLASHIPS</span>
+        <span>SCHOLARSHIPS</span>
       </div>
       <img className="mainImgg" src="/aboutImg.jpg" alt="" />
       <section className="section2">

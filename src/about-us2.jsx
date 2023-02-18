@@ -32,7 +32,7 @@ function AboutUs() {
         <div className="z-10 absolute top-[87%] left-1/2 -translate-y-1/2 -translate-x-1/2 min-w-[370px] sm:top-1/2">
           <div className="justify-center flex gap-[20px] mb-4 sm:hidden">
             <span className="text-sm justify-center rounded-[8px] text-white bg-[#2F3F93] block px-7 py-3">FIND SCHOOLS</span>
-            <span className="text-sm justify-center rounded-[8px] text-[#2F3F93] bg-white block px-7 py-3 border-2 border-[#2F3F93]">SCHOLASHIPS</span>
+            <span className="text-sm justify-center rounded-[8px] text-[#2F3F93] bg-white block px-7 py-3 border-2 border-[#2F3F93]">SCHOLARSHIPS</span>
           </div>
           <div className="z-10">
             <Search />
@@ -45,7 +45,7 @@ function AboutUs() {
       </section>
       <div className="justify-between hidden gap-[20px] mb-4 sm:flex p-5">
         <span className="text-sm justify-center rounded-[8px] text-white bg-[#2F3F93] block px-7 py-3">FIND SCHOOLS</span>
-        <span className="text-sm justify-center rounded-[8px] text-[#2F3F93] bg-white block px-7 py-3  border-2 border-[#2F3F93]">SCHOLASHIPS</span>
+        <span className="text-sm justify-center rounded-[8px] text-[#2F3F93] bg-white block px-7 py-3  border-2 border-[#2F3F93]">SCHOLARSHIPS</span>
       </div>
       <img className="mainImgg" src="/aboutImg.jpg" alt="" />
       <section className="section2">

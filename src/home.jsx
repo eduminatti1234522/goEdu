@@ -53,7 +53,7 @@ function Home() {
     },
   ];
   return (
-    <MainCont>
+    <MainCont className="text-white">
       <section className="section1">
         <div className="sideBar">
           <SideBar />

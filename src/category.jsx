@@ -44,7 +44,7 @@ function Category() {
     schoolsFunc();
   }, []);
   return (
-    <MainCont>
+    <MainCont className="text-white">
       <section className="section1">
         <div className="sideBar bg">
           <SideBar />
@@ -52,7 +52,7 @@ function Category() {
         <div className="innerDiv">
           <div className="btns">
             <span>FIND SCHOOLS</span>
-            <span>SCHOLASHIPS</span>
+            <span className="text-blue-400 !important ">SCHOLARSHIPS</span>
           </div>
           <div className="search">
             <Search />
@@ -65,7 +65,7 @@ function Category() {
       </section>
       <div className="btns btnsOuter">
         <span>FIND SCHOOLS</span>
-        <span>SCHOLASHIPS</span>
+        <span >SCHOLARSHIPS</span>
       </div>
       <section className="section2">
         <div className="block1">
