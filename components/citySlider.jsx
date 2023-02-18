@@ -9,6 +9,10 @@ import Btn from './btn'
 import { Link } from "react-router-dom";
 import cityimg from "../public/images/cities/city1.jpg"
 
+
+
+const imgURL = "https://www.outlookindia.com/outlooktraveller/resizer.php?src=https://www.outlookindia.com/outlooktraveller/public/uploads/articles/explore/shutterstock_1609122238.jpg&w=500&h=400"
+
 function sturc() {
     const settings = {
         className: "center",
@@ -57,7 +61,10 @@ function sturc() {
   //     },
   //     spaceBetween: 30
   //   }
-  const cities = [{}, {}, {}, {}, {}];
+  const cities = [{city:"Dehradun", img:"https://www.theasianschool.net/blog/wp-content/uploads/2021/09/Unison-World-School.jpg"},
+  {city:"Delhi", img:"https://www.millenniumpost.in/h-upload/2021/12/21/600037-fb1727c8-5984-41be-8ff5-cb4e0e13a9b0.jpg"},
+  {city:"Mumbai", img:"https://i0.wp.com/mumbai7.com/wp-content/uploads/2016/04/dreamstime_s_193769319.jpg"},
+  {city:"Hyderabad", img:"https://content.jdmagicbox.com/comp/hyderabad/z6/040pxx40.xx40.140513151315.d3z6/catalogue/hyderabad-international-school-moghalpura-hyderabad-schools-ep8jd.jpg?clr=462020"}];
   return (
     <MainCont>
       <h2>SCHOOLS BY CITIES</h2>
@@ -69,10 +76,12 @@ function sturc() {
           <div key={index} className="outerSingCity">
             <Link to="/category/dehradun/boarding">
           <div className="singCity">
-            <img src={cityimg} alt="" />
-            <h4>DUBAI</h4>
+            <img src={val.img} alt="" />
+            <h4>{val.city}</h4>
           </div>
+          
         </Link>
+        
           </div>
         ))}
         

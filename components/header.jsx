@@ -46,7 +46,7 @@ position:relative;
 height: 70px;
 
 .logo{
-  height: 60px;
+  height: 40px;
 }
 .sm{
     display:none;

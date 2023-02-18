@@ -10,12 +10,12 @@ function sturc() {
         {text:"Register School", url:""}
     ]
   return (
-    <MainCont>
+    <MainCont className='text-white'>
 <div className="block1">
     <div className="logoCont">
     <img src="/logo.png" alt="" />
     </div>
-    <p className='sm'>Get the most reliable Boarding Schools Admission information and expert advisory from a range of 300 schools from 20 states and 100 cities listed on our website. Search, compare, analyse and select the best school for yourself.</p>
+    <p className='sm '>Get the most reliable Boarding Schools Admission information and expert advisory from a range of 300 schools from 20 states and 100 cities listed on our website. Search, compare, analyse and select the best school for yourself.</p>
 
     <div className="links">
         {
@@ -31,7 +31,7 @@ function sturc() {
         <span className='updated'>Keep us updated</span>
         <input type="text" placeholder="youremailid@greatsite.com"/>
         <span className='submit'><span>Submit</span></span>
-        <span className='mark bg'>@2022.explorebali.Allrightsreserved</span>
+        <span className='mark bg'>@2023.explorebali.Allrightsreserved</span>
     </div>
 </div>
 <div className="block3">
@@ -43,7 +43,7 @@ Dubai, UAE</p>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6888.673430950683!2d78.04966312477076!3d30.31293888916962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929b045cc25b1%3A0xcdb3dadf017e49cf!2sPanchpuri%20Colony%2C%20Dalanwala%2C%20Dehradun%2C%20Uttarakhand%20248001!5e0!3m2!1sen!2sin!4v1671690954076!5m2!1sen!2sin" width="600" height="450" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </div>
-<span style={{color:"#EAFB81", fontSize:"11px", marginTop:"27px", marginBottom:"30px"}} className='mark sm'>@2022.explorebali.Allrightsreserved</span>
+<span style={{color:"#EAFB81", fontSize:"11px", marginTop:"27px", marginBottom:"30px"}} className='mark sm'>@2023.explorebali.Allrightsreserved</span>
     </MainCont>
   )
 }
@@ -58,6 +58,7 @@ padding: 10px 25px;
 justify-content:space-between;
 .sm{
     display:none;
+    margin-top:30px
 }
 .bg{
     display:initial;
@@ -171,7 +172,7 @@ a{
     padding:0;
     width:95%;
     .logoCont{
-        width:80%;
+        width:70%;
         margin:auto;
         border-bottom: 2px solid white
     }
