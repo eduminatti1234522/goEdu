@@ -1,32 +1,48 @@
-import React from 'react'
-import styles from 'styled-components'
-import FeaCard from './cityCard'
-import Btn from './btn'
+import React from "react";
+import styles from "styled-components";
+import FeaCard from "./cityCard";
+import Btn from "./btn";
+
+const FeatureSchool = [
+  {
+    school: "JIRS",
+    img: "https://content3.jdmagicbox.com/comp/bilaspur-chhattisgarh/q7/9999p7752.7752.091120123808.g6q7/catalogue/the-jain-international-school-sakri-bilaspur-chhattisgarh-schools-1y8vtzu.jpg",
+  },
+  {
+    school: "Asian School",
+    img: "https://content3.jdmagicbox.com/comp/dehradun/y6/9999px135.x135.121009132714.a2y6/catalogue/the-asian-school-dehradun-city-dehradun-schools-2jbi0a0.png",
+  },
+  {
+    school: "Doon Public School",
+    img: " https://www.doonschool.com/wp-content/uploads/2019/08/24173858_2234362349914822_8661319849927400643_o.jpg",
+  },
+  {
+    school: " Welham Girls School",
+    img: "https://www.roundsquare.org/wp-content/uploads/2019/10/Welham-Girls%E2%80%99-School-1200x800.jpg",
+  },
+];
 
 function sturc() {
   return (
     <MainCont>
-        <h2>FEATURED SCHOOLS</h2>
-     <div className="slider">
-       {
-        [...new Array(3)].map((val,index)=>
-        <div key={index} className="sing">
-<FeaCard/>
-        </div>
-        )
-       } 
-       </div>
-       <div className="btn">
-       <Btn text={"Explore"}/>
-       </div>
+      <h2>FEATURED SCHOOLS</h2>
+      <div className="slider">
+        {FeatureSchool.map((val, index) => (
+          <div key={index} className="sing">
+            <FeaCard name={val.school} url={val.img}/>
+          </div>
+        ))}
+      </div>
+      <div className="btn">
+        <Btn text={"Explore"} />
+      </div>
     </MainCont>
-  )
+  );
 }
 
-export default sturc
+export default sturc;
 
-
-const MainCont=styles.div`
+const MainCont = styles.div`
 .slider{
     display:flex;
     justify-content:space-around;

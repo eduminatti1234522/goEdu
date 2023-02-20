@@ -111,6 +111,7 @@ a{
             margin-top: 15px;
             width: 100%;
             text-align: initial;
+            
         }
         input{
             background: white;
@@ -118,7 +119,7 @@ a{
     box-shadow: inset 0px 4px 4px rgb(0 0 0 / 25%);
     border-radius: 7px;
     border: none;
-    width: 87%;
+    width: 95%;
     margin-right: 5%;
         }
         .submit{

@@ -55,7 +55,7 @@ display: flex;
     flex-direction: row;
     justify-content:space-between;
     align-items: end;
-    padding: 20px 15px;
+    padding: 20px 10px;
     background: rgba(255, 255, 255, 0.17);
 box-shadow: 0px 0px 10px 1px #1F001B;
 border-radius: 15px;
@@ -65,7 +65,7 @@ min-width: 350px;
 .sing{
     display: flex;
     flex-direction: column;
-    width:35%;
+    width:37%;
     span{
         text-align: initial;
     }
@@ -84,23 +84,28 @@ padding-bottom: 0px;
 ::placeholder {
     color: gray;
     opacity: 0.8;
+    // font-weight: smaller;
+    
   }
   
   :-ms-input-placeholder { 
    color: gray;
    opacity: 0.8;
+  //  font-weight: smaller;
 
   }
   
   ::-ms-input-placeholder { 
    color: gray;
    opacity: 0.8;
+  //  font-weight: smaller;
+   
   }
 .submit{
     background: #29AEF9;
     border: none;
     border-radius: 7px;
-    width: 20%;
+    width: 23%;
     height:40px !important ;
     cursor: pointer
 }
@@ -112,7 +117,7 @@ padding-bottom: 0px;
         input{
             width:100%;
     height:25px;
-    font-size:12px;
+    font-size:10px;
         }
     }
     .submit{

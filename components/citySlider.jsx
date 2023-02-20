@@ -116,6 +116,7 @@ min-width:200px;
 img{
     width:100%;
     aspect-ratio:4/3;
+    border-radius: 15px;
 }
 h4{
     color:black;
